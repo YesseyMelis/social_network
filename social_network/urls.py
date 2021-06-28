@@ -22,6 +22,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, Sp
 
 patterns = [
     path('', include('apps.account.urls', namespace='authentication')),
+    path('post/', include('apps.post.urls', namespace='post')),
 ]
 
 urlpatterns = [

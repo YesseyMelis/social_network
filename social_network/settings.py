@@ -64,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'apps.account.middleware.UpdateLastActivityMiddleware',
 ]
 
 # AUTH BACKENDS
@@ -139,8 +140,8 @@ DATABASES = {
         },
         'NAME': os.getenv('DB_NAME', 'network'),
         'USER': os.getenv('DB_USER', 'network'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'LTiSD2t6vRCn4a18'),
-        'HOST': os.getenv('DB_HOST', 'db'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'network'),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
         'PORT': os.getenv('DB_PORT', 5432),
     }
 }
